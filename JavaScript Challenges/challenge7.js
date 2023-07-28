@@ -1,0 +1,1 @@
+// Both will generate False Result as string and numeric data can't be equal.
