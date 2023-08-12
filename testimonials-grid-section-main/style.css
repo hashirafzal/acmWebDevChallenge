@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+body {
+    display: grid;
+    min-height: 100vh;
+    place-content: center;
+    background-color: hsl(210, 46%, 95%);
+}
+.container {
+    display: grid;
+    max-width: 1000px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    "Daniel Daniel Jonathan Kira" 
+    "Jeanette Patrick Patrick Kira";
+    gap: 10px;
+}
+@media (max-width: 768px) {
+    .container {
+        max-width: 310px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "Daniel"
+        "Daniel"
+        "Jonathan"
+        "Jeanette"
+        "Patrick"
+        "Patrick"
+        "Kira"
+        "Kira";
+    }
+}
+.container .quote {
+    padding: 20px;
+    border-radius: 12px;
+}
+.container .Daniel {
+    grid-area: Daniel;
+    color: white;
+    background-image: url(../img/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 85% 5%;
+    background-color:  hsl(263, 55%, 52%);
+}
+.container .Jonathan {
+    grid-area: Jonathan;
+    color: white;
+    background-color: hsl(217, 19%, 35%);
+}
+.container .Kira {
+    grid-area: Kira;
+    background-color: white;
+}
+.container .Patrick {
+    grid-area: Patrick;
+    color: white;
+    background-color: hsl(219, 29%, 14%);
+}
+.container .Jeanette {
+    grid-area: Jeanette;
+    background-color: white;
+}
+.container .quote .p-info {
+    display: flex;
+    padding: 0 0 12px;
+    align-items: center;
+}
+.container .quote .p-info img {
+    border: 1px solid white;
+    max-width: 30px;
+    border-radius: 50%;
+}
+.container .quote .p-info .t-info {
+    padding: 12px;
+}
+.container .quote .p-info .t-info .p-name {
+    font-weight: 600;
+}
+.container .Daniel .p-info img {
+    border-color: hsla(263, 55%, 52%, 0.7);
+}
+.container .Daniel .p-info .t-info .p-name {
+    color: hsl(210, 46%, 95%);
+}
+.container .Daniel .p-info .t-info p:last-child {
+    color: hsla(210, 46%, 95%, 0.5);
+}
+.container .Jonathan .p-info img {
+    border-color: hsl(217, 19%, 35%);
+}
+.container .Jonathan .p-info .t-info .p-name {
+    color: hsl(210, 46%, 95%);
+}
+.container .Jonathan .p-info .t-info p:last-child {
+    color: hsla(210, 46%, 95%, 0.5);
+}
+.container .Kira .p-info .t-info .p-name,
+.container .Jeanette .p-info .t-info .p-name {
+    color: hsl(217, 19%, 35%);
+}
+.container .Kira .p-info .t-info p:last-child,
+.container .Jeanette .p-info .t-info p:last-child {
+    color: hsla(217, 19%, 35%, 0.5);
+}
+.container .Patrick .p-info img {
+    border-color: hsl(263, 55%, 52%);
+}
+.container .Patrick .p-info .t-info .p-name {
+    color: hsl(0, 0%, 81%);
+}
+.container .Patrick .p-info .t-info p:last-child {
+    color: hsla(0, 0%, 81%, 0.5);
+}
+.container .quote .text h4 {
+    font-size: 1.33rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+.container .Daniel .text p {
+    color: hsla(210, 46%, 95%, 70%);
+}
+.container .Jonathan .text p {
+    color: hsla(210, 46%, 95%, 70%);
+}
+.container .Kira .text p,
+.container .Jeanette .text p {
+   color: hsla(217, 19%, 35%, 70%);
+}
+.container .Jeanette .text h4,
+.container .Kira .text h4 {
+    color: hsl(217, 19%, 35%);
+}
+.container .Patrick .text p {
+    color: hsla(0, 0%, 81%, 70%);
+}
